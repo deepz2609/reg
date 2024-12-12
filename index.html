@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1>Admission Form</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>B.E. Admission Form</h2>
+        <form id="admissionForm" action="submit.php" method="POST">
+            <!-- Personal Information -->
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required><br><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br><br>
+
+            <!-- Educational Information -->
+            <h3>Educational Information</h3>
+            <label for="board">Board (e.g., CBSE, ICSE):</label>
+            <input type="text" id="board" name="board" required><br><br>
+
+            <label for="schoolName">School/College Name:</label>
+            <input type="text" id="schoolName" name="schoolName" required><br><br>
+
+            <label for="percentage">Percentage in 12th Grade:</label>
+            <input type="number" id="percentage" name="percentage" required><br><br>
+
+            <!-- Course Preferences -->
+            <h3>Course Preferences</h3>
+            <label for="preferredCourse">Preferred Course:</label>
+            <select id="preferredCourse" name="preferredCourse" required>
+                <option value="computer_science">Computer Science Engineering</option>
+                <option value="electrical">Electrical Engineering</option>
+                <option value="mechanical">Mechanical Engineering</option>
+                <option value="civil">Civil Engineering</option>
+            </select><br><br>
+
+            <label for="stream">Stream:</label>
+            <select id="stream" name="stream" required>
+                <option value="regular">Regular</option>
+                <option value="part_time">Part-time</option>
+            </select><br><br>
+
+            <!-- Additional Information -->
+            <h3>Additional Information</h3>
+            <label for="hobbies">Hobbies:</label>
+            <input type="text" id="hobbies" name="hobbies"><br><br>
+
+            <label for="achievements">Achievements (if any):</label>
+            <textarea id="achievements" name="achievements"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="response" class="hidden">
+            <h2>Your Submitted Information</h2>
+            <div id="displayData"></div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 B.E. Admission Portal. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
